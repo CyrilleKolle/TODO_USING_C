@@ -31,7 +31,7 @@ int main()
     while (1)
     {
         system("Color 3f");
-        system("cls");
+        system("clear");
         printf("1. To see your ToDo list \n");
         printf("2. To create new ToDo \n");
         printf("3. To delete your ToDo \n");
@@ -58,7 +58,7 @@ int main()
             exit(0);
         default:
             printf("\nInvalid Choice: :-(\n");
-            system("pause");
+            while (getchar() != '\n');
         }
     }
     return 0;
@@ -69,26 +69,19 @@ void interface()
     // code for splashcreen
     system("Color 4F");
     printf("\n\n\n\n");
-    printf("\t~~~~~~~~~~~~~~~~~~~~~~"
-           "~~~~~~~~~~~~~~~~~~~~~~~"
-           "~~~~~~~~~~~~~~~~~~~~~~~"
-           "~~~~~~~~~~~~~~~~~~~~~~~~"
-           "~~~~~~~~~~\n\n");
-    printf("\t} #############  #######    ######       #######\n");
-    printf("\t}      #         #     #    #     #      #     #\n");
-    printf("\t}      #         #     #    #      #     #     #\n");
-    printf("\t}      #         #     #    #      #     #     #\n");
-    printf("\t}      #         #     #    #      #     #     #\n");
-    printf("\t}      #         #     #    #     #      #     #\n");
-    printf("\t       #         #######    ######       #######\n\n");
-    printf("\t~~~~~~~~~~~~~~~~~~~~~"
-           "~~~~~~~~~~~~~~~~~~~~~~~~"
-           "~~~~~~~~~~~~~~~~~~~~~~~~"
-           "~~~~~~~~~~~~~~~~~~~~~~~"
-           "~~~~~~~~~~\n\n");
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
+    printf("     #############  #######    ######       #######\n");
+    printf("          #         #     #    #     #      #     #\n");
+    printf("          #         #     #    #      #     #     #\n");
+    printf("          #         #     #    #      #     #     #\n");
+    printf("          #         #     #    #      #     #     #\n");
+    printf("          #         #     #    #     #      #     #\n");
+    printf("          #         #######    ######       #######\n\n");
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
+    printf("~~~~~~~~~~~~~~~Press S Then Enter To Start~~~~~~~~~~~~~~~\n\n");
 
     // pause screen until user press any key
-    system("pause");
+    while (getchar() != '\n');
 };
 
 void seetodo()
@@ -106,14 +99,14 @@ void seetodo()
             temp = temp->next;
         }
     }
-    system("pause");
+    while (getchar() != '\n');
 }
 
 void createtodo()
 {
     char c;
     todo *add, *temp;
-    system("cls");
+    system("clear");
 
     while (1)
     {
@@ -160,7 +153,7 @@ void deletetodo()
 {
     int x, deleted = 0;
     todo *del, *prev;
-    system("cls");
+    system("clear");
     printf("\nEnter the ToDo's number that you want to remove. \n\t\t");
 
     if (start == NULL)
@@ -201,7 +194,7 @@ void deletetodo()
             printf("ToDo not found.\n");
         }
     }
-    system("pause");
+    while (getchar() != '\n');
 }
 
 void adjustcount()
